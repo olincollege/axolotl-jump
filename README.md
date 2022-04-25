@@ -1,2 +1,2 @@
 # pretty-landscape
-softdes final project for jen and lukas
+landscape traversing game with pretty visuals
