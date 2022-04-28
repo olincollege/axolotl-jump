@@ -3,3 +3,5 @@
 #         Location
 #         Dead or alive
 #         Sprite
+#         speed
+

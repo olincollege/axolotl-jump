@@ -1,3 +1,6 @@
+#capturing and handling any user intputs
+
+
 # Class Controller
 #     Def restart
 #     Def game over

@@ -4,8 +4,9 @@ from pygame.locals import *
 pygame.init()
 vec = pygame.math.Vector2
 
-HEIGHT = 600
-WIDTH = 800
+#initializing board specifications
+HEIGHT = 600 
+WIDTH = 800 
 ACC = 0.5
 FPS = 60
 

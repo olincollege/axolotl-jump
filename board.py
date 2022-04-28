@@ -1,5 +1,4 @@
-# Class Character
+# Class Map
 #     Init
-#         Location
-#         Dead or alive
-#         Sprite
+#         Location of sprite
+#         Location of obstacles
