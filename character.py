@@ -54,3 +54,5 @@ class Character(pygame.sprite.Sprite):
 #         Location
 #         Dead or alive
 #         Sprite
+#         speed
+
