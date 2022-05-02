@@ -3,7 +3,7 @@
 
 # Class Controller
 #     Def restart
-#     Def game over
+#       keyboard input to run restart function
 
 #     Class CharacterController (Controller)
 #         Init

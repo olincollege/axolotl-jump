@@ -1,5 +1,6 @@
 import pygame
 from pygame.locals import *
+import sys
 
 pygame.init()
 vec = pygame.math.Vector2
