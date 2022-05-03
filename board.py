@@ -9,9 +9,17 @@ screen = pygame.display.set_mode(scr_size)
 clock = pygame.time.Clock()
 pygame.display.set_caption("Mushroom Run")
 
+# class 
+# init
+    # position of everything
+    # obstacle position
+    # size of obstacles
+    # score (time passed)
+    # game state (game over/restart)
+# 
+
 class Map():
     def __init__(self):
-        self.isDead = False
         self.surf = pygame.Surface(())
         self.surf.fill(())
         self.rect = self.surf.get_rect(center = (10,420))   
@@ -34,7 +42,7 @@ class Obstacles(pygame.sprite.Sprite):
         self.surf = pygame.Surface(())
         self.surf.fill(())
         self.rect = self.surf.get_rect(center = (10,420))
-        self.movement = [-1*speed, 0]
+        self.movement = [5, 0]
 
     def draw(self):
         screen.blit(self.rect)

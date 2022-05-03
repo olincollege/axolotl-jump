@@ -13,6 +13,14 @@ screen = pygame.display.set_mode(scr_size)
 clock = pygame.time.Clock()
 pygame.display.set_caption("Mushroom Run")
 
+# class 
+# init
+    # player position
+    # size of player
+
+# 
+
+
 class Character(pygame.sprite.Sprite):
     def __init__(self):
         # is this supposed to be super?

@@ -1,18 +1,37 @@
-# stores games state
-# class 
-# init
-    # player position
-    # position of everything
-    # obstacle position
-    # size of player and obstacles
-    # score (time passed)
-    # game state (game over/restart)
+import pygame
+import controller
+import character
+import game
 
-# function
-    # jump function
+scr_size = (width,height) = (600,600)
+FPS = 60
+gravity = 0.6
 
-# update function
-    # updates all init values
+screen = pygame.display.set_mode(scr_size)
+clock = pygame.time.Clock()
+pygame.display.set_caption("Mushroom Run")
+
+class Model():
 
 
-# referencing character and board and storing state of those things here
+    def __init__(self):
+        self.characterpos == [0,0]
+
+    def jump(self):
+        if controller.CharacterController.isJumping == True:
+            self.characterpos[1] = self.characterpos[1] + gravity
+
+    def restart_game(self):
+        if controller.Controller.restartGame == True:
+            return game
+        
+    def exit(self):
+        if controller.Controller.quitGame == True:
+            quit()
+    
+    def game_over(self):
+        if character.Character.isDead == True:
+            print("Game Over: Press Enter to Restart and ESC to quit.")
+
+    def update(self):
+        pass
