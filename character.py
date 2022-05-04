@@ -27,7 +27,7 @@ class Character(pygame.sprite.Sprite):
         self.surf = pygame.Surface(())
         self.surf.fill(())
         self.rect = self.surf.get_rect(center = (10,420))   
-        self.index = 0
+
         self.counter = 0
         self.score = 0
 
