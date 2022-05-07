@@ -14,7 +14,9 @@ class Controller():
     def update(self):
         events = pygame.event.get()
         for event in events:
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.QUIT:
+                self.quitGame
+            elif event.type == pygame.KEYDOWN:
                 self.restartGame = (event.key == pygame.K_RETURN)
                 self.quitGame = (event.key == pygame.K_ESCAPE)
                 if event.key == pygame.K_SPACE or event.key == pygame.K_UP:

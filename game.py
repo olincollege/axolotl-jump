@@ -11,7 +11,9 @@ import sys
 
 pygame.init()
 
-scr_size = (width,height) = (600,600)
+scr_size = (width,height) = (1000,600)
+ground = 100
+
 
 class Game:
 #     Init
@@ -30,11 +32,11 @@ class Game:
         self.clock = pygame.time.Clock()
 
     def draw_character(self, position):
-        rectangle = pygame.Rect(100 + position[0] - 10, 500 - position[1]-40, 20, 40)
+        rectangle = pygame.Rect(100 + position[0] - 10, 430 + position[1], 20, 40)
         pygame.draw.rect(self.screen, (0,0,0), rectangle)
 
     def draw_obstacle(self, position, size):
-        rectangle = pygame.Rect(100 + position - 5, 500-size, 10, size)
+        rectangle = pygame.Rect(100 + position - 5, 440 + size, 10, size)
         pygame.draw.rect(self.screen, (0,0,0), rectangle)
 
     def update(self):
@@ -42,12 +44,21 @@ class Game:
         self.controller.update()
         self.model.update(self.controller.isJumping ,self.controller.restartGame, self.controller.quitGame)
 
+        # draw floor
+        pygame.draw.rect(self.screen, (50,50,50), [0,500,width,100])
+
+        # draw character
         self.draw_character(self.model.characterpos)
+        # draw obstacles
         for obstacle in self.model.obstacles:
             self.draw_obstacle(obstacle.position, obstacle.size)
 
-        pygame.display.flip()
+        # update score
         self.clock.tick(self.fps)
+        font = pygame.font.SysFont("roboto", 20)
+        score_text = font.render(f'Score: {self.model.score}', True, (0,0,0))
+        self.screen.blit(score_text, (width/2, 100))
+        pygame.display.flip()
 
     def start(self):
         self.model = model.Model()
@@ -64,7 +75,7 @@ class Game:
             
     def game_over(self):
         font = pygame.font.SysFont("roboto", 30)
-        text = font.render("Game Over", True, (0,0,0))
+        text = font.render("Game Over: Press Enter to Restart", True, (0,0,0))
         text_rect = text.get_rect(center = (width/2, height/2))
         self.screen.blit(text, text_rect)
         pygame.display.flip()
