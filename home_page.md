@@ -1,6 +1,6 @@
 layout: page
 title: "Home"
-permalink: https://silver-spork-a93a88a2.pages.github.io/home
+permalink: https://olincollege.github.io/mushroom-jump/
 
 
 
