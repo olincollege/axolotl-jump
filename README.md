@@ -1,2 +1,2 @@
-# pretty-landscape
-landscape traversing game with pretty visuals
+# Block Jump
+Block Jump is an endless runner game where everything is blocks!
