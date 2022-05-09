@@ -11,7 +11,9 @@ We were inspired by platformer games and the artstyles of Obi and Hollow Knight.
 Block Jump begins with the main character, a red block, on the left side of the screen. The player is prompted to begin the game by hitting the space bar. Once the game begins, stalagmites start moving right to left towards the player. To avoid the stalagmites, the player uses either the spacebar or the up arrow key to jump. For every 1000 points, the speed of the obstacles will increase by one frame per second. The game ends when the character collides with one of the stalagmites.
 
 # Game Demo
-[](https://drive.google.com/file/d/1Vg7eKoFLRUgzZnQ-7IAVtlF4v4G6GIho/view?usp=sharing)
+<figure class="video_container">
+  <iframe src="https://drive.google.com/file/d/1Vg7eKoFLRUgzZnQ-7IAVtlF4v4G6GIho/view?usp=sharing" frameborder="0" allowfullscreen="true"> </iframe>
+</figure> 
 
 # Game Components
 
