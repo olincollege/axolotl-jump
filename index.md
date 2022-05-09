@@ -24,7 +24,7 @@ When the game ends, the highest score a player has gotten playing the game will 
 ![Large text reading "Game Over" is displayed, alongside the player's current score and the high score for the game](/img/axolotl_jump_game_over_screen.png)
 
 # Character
-![A pink goofy axolotl](axolotl.png)
+![A pink goofy axolotl](/img/axolotl.png)
 
 The main character of Axolotl Jump is a pink axololt. The spacebar or the up arrow key can be pressed to get The Axolotl to jump.
 
