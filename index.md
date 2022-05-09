@@ -30,7 +30,7 @@ The main character of Axolotl Jump is a pink axololt. The spacebar or the up arr
 
 # Obstacles
 
-![A blue stalagmite](/stalactites.png)
+![A blue stalagmite](/img/stalactites.png)
 
 The obstacles of Axolotl Jump are stalagmites, which move along the floor of the cave. The distance between the stalagmites is randomized to the timing of when a player will need to jump is unpredictable.
 
