@@ -1,5 +1,6 @@
 """
-Capturing and handling any user intputs
+Capturing and handling any user intputs. This is the controller of model, view,
+controller.
 """
 import pygame
 
@@ -14,7 +15,7 @@ class Controller():
 
     def update(self):
         """
-        
+        Function representing the keyboard inputs and the variables they change.
         """
         events = pygame.event.get()
         for event in events:

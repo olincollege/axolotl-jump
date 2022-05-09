@@ -1,3 +1,7 @@
+"""
+Pytest for model.py file
+"""
+
 import pytest
 import model
 
@@ -14,12 +18,11 @@ collision_cases = [
     (model.Obstacle(30, 10), True),
     # Check that collision from the behind is detected
     (model.Obstacle(30, -10), True),
-
 ]
 
 boundary_case = [
     # Check that the character never goes below the boundary.
-    False, 
+    False,
     # Check that the character doesn't go below the boundary while jumping.
     True
 ]
@@ -27,7 +30,7 @@ boundary_case = [
 @pytest.mark.parametrize("obstacle, output", collision_cases)
 def test_collision(obstacle, output):
     """
-    Check that swing_states_all works as expected
+    Check that collisions are detected as expected.
 
     Args:
         states: a list containing state data
@@ -39,7 +42,7 @@ def test_collision(obstacle, output):
 @pytest.mark.parametrize("jumping", boundary_case)
 def test_boundary(jumping):
     """
-    Check that swing_states_all works as expected
+    Check that the character never goes below the boundary.
 
     Args:
         states: a list containing state data
@@ -51,15 +54,20 @@ def test_boundary(jumping):
         assert model_test.characterpos[1] >= 0
 
 def test_jump():
+    """
+    Check that the character is jumping when jump is True.
+    """
     model_test = model.Model()
     last_y = model_test.characterpos[1]
     model_test.update(True)
     assert model_test.characterpos[1] > last_y
 
 def test_mid_jump():
+    """
+    Check that the character will not jump again if it is already jumping.
+    """
     model_test = model.Model()
     model_test.characterpos[1] = 5
     last_y = model_test.characterpos[1]
     model_test.update(True)
     assert model_test.characterpos[1] == last_y
-

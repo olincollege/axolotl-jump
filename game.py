@@ -1,13 +1,11 @@
-
-'''The Game Loop is where all the game events occur, update and get drawn to 
-the screen. Once the initial setup and initialization of variables is out of 
-the way, the Game Loop begins where the program keeps looping over and over 
-until an event of type QUIT occurs.'''
-
+"""
+This file is where the game events occur, update and get drawn to
+the screen. This is the view of the model, view, controller.
+"""
+import sys
 import pygame
 import model
 import controller
-import sys
 
 pygame.init()
 
@@ -21,10 +19,10 @@ image = pygame.transform.scale(image, (30, 80))
 character_image = pygame.image.load("axolotl.png")
 character_image = pygame.transform.scale(character_image, (50, 50))
 
-ground = 100
+GROUND = 100
 
 
-class Game:
+class Game():
     """
     Representation of the view and game of the endless runner game.
     """
@@ -37,18 +35,35 @@ class Game:
         self.highscore = 0
 
     def draw_character(self, position):
-        # rectangle = pygame.Rect(250 + position[0] - 10, 500 - position[1] - 40, 20, 40)
-        # pygame.draw.rect(self.screen, (250,50,50), rectangle)
+        """
+        Given a position, the character is draw on the screen.
+
+        Args:
+            position: coordinates in the form of (x,y) representing the
+            position of the character.
+        """
         self.screen.blit(character_image, (250 + position[0] - 10, 500 - position[1] - 40))
 
     def draw_obstacle(self, position, size):
-        # rectangle = pygame.Rect(250 + position - 5, 440 + size, 10, size)
-        # pygame.draw.rect(self.screen, (0,0,50), rectangle)
+        """
+        Given a position and size, the obstacle is draw on the screen.
+
+        Args:
+            position: a value representing the location of the obstacle.
+            size: a value representing the size of the obstacle.
+        """
         self.screen.blit(image, (250 + position - 5, 400 + size))
 
     def update(self):
+        """
+        Function that updates all variables and visually updates them on the
+        screen.
+        """
+        # draw background
         self.screen.fill((10,0,20))
         self.screen.blit(bg,(0,0))
+
+        # update model and controller
         self.controller.update()
         self.model.update(self.controller.isJumping)
 
@@ -70,10 +85,14 @@ class Game:
         pygame.display.flip()
 
     def start(self):
+        """
+        Function that starts the game.
+        """
         self.model = model.Model()
-        while self.model.isDead == False:
+        while self.model.isDead is False:
             self.update()
-    
+
+        # when character dies, run game over
         self.game_over()
         while True:
             self.controller.update()
@@ -81,26 +100,22 @@ class Game:
                 sys.exit(0)
             elif self.controller.restartGame:
                 self.start()
-            
+
     def game_over(self):
+        """
+        Function that represents what the screen will display after the game is
+        over.
+        """
         font = pygame.font.SysFont("roboto", 50)
-        text = font.render(f"Game Over: Press Enter to Restart", True, (250,250,250))
-        
+        text = font.render("Game Over: Press Enter to Restart", True, (250,250,250))
+
         self.highscore = max(self.model.score, self.highscore)
         font1 = pygame.font.SysFont("roboto", 30)
         text1 = font1.render(f"Highscore: {self.highscore}", True, (250,250,250))
-        
+
         text_rect = text.get_rect(center = (width/2, height/2))
         text1_rect = text1.get_rect(center = (width/2, height/2 - 50))
 
         self.screen.blit(text, text_rect)
         self.screen.blit(text1, text1_rect)
         pygame.display.flip()
-
-
-#exiting the game loop
-    # while True:
-    #     pygame.display.update() #rerenders screen at each loop iteration
-    #     for event in pygame.event.get():
-    #         pygame.quit()
-    #         sys.exit()

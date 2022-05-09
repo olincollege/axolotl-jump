@@ -1,8 +1,6 @@
-# def main (function)
-
-# initializes game.py
-# runs game.py
-
+"""
+This is the python file that runs the main game.
+"""
 import game
 
 if __name__ == '__main__':
