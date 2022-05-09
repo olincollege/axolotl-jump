@@ -4,7 +4,7 @@ In Block Jump, your goal is to accumulate the highest score by jumping over as m
 
 # Project Goal
 
-We were inspired by platformer games and the artstyles of Obi and Hollow Knight. We wanted to create a game that was simple to play and incorporated pretty visuals.
+We were inspired by platformer games and the artstyles of Ori Will of the Wisps and Hollow Knight. We wanted to create a game that was simple to play and incorporated pretty visuals.
 
 # Game Overview
 
