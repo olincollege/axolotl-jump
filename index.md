@@ -16,10 +16,10 @@ Block Jump begins with the main character, a red block, on the left side of the 
 # Game Components
 
 At the top of the screen the current score of the play is displayed.
-![Screenshot of a frame of in-game play. The player's score is visible at the top center of the screen](/img/block_jump_in_game_screen.png "Player's Score")
+![Screenshot of a frame of in-game play. The player's score is visible at the top center of the screen](/img/block_jump_in_game_screen.png)
 
 When the game ends, the highest score a player has gotten playing the game will be displayed. This stat is updated for every new game play and will be overwritten if the current player's score is greater than the previous player's score. 
-![Screenshot of the Game Over screen. Large text reading "Game Over" is displayed, alongside the player's current score and the high score for the game](/img/block_jump_game_over_screen.png "Game Over Screen")
+![Screenshot of the Game Over screen. Large text reading "Game Over" is displayed, alongside the player's current score and the high score for the game](/img/block_jump_game_over_screen.png)
 
 # Character
 
