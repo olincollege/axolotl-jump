@@ -5,6 +5,8 @@ In order to replicate this game, you will first need to be running python 3, and
 
 '''pip install pygame'''
 
+Look at [our website](https://olincollege.github.io/axolotl-jump/) for more info!
+
 ## model.py
 After setting up, we can start with the model.py file. This is the most important file, as it contains the state of the program. In this file, we will store a few important things: This includes the position of the character, the position of the obstacles and the score. In our init function, we should list all of these variables, along with any supporting variables, such as whether or not the character is dead or the change in y position for the character.
 
