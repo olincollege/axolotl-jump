@@ -44,3 +44,6 @@ This game was created by Jen Lee '23 and Luke Milroy '23. Jen is a design major 
 
 # Attributions
 
+We looked to this [tutorial](https://www.youtube.com/watch?v=ZV8TNrwqG1Y) from LeMaster Tech for inital structure development.
+
+We utilized freepik for the images for the [background](https://www.freepik.com/free-vector/cave-cartoon-background-stone-tunnel-frame-with-snow-stalactites-entrance-mountain-empty-hole-rock-with-copy-space-text-image-grotto-hidden-underground-tunnel-vector-illustration_24025357.htm#page=2&query=cave&position=20&from_view=author) and the [tutorial](https://www.freepik.com/free-vector/stalactite-icicle-shaped-hanging-from-caves-ceilings-mineral-formations-varieties-cobalt-blue-realistic-set-isolated-illustration_21078356.htm#query=cave%20background&position=14&from_view=search). 
