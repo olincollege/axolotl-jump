@@ -11,7 +11,7 @@ We were inspired by platformer games and the artstyles of Ori Will of the Wisps 
 Axolotl Jump begins with the main character, The Axolotl, on the left side of the screen. The game is initiated when the main.py file is run. Once the game begins, stalagmites start moving right to left towards the player. To avoid the stalagmites, the player uses either the spacebar or the up arrow key to jump. For every 1000 points, the speed of the obstacles will increase by one frame per second. The game ends when the character collides with one of the stalagmites.
 
 # Game Demo
-{Watch the video presentation here](https://youtube.com/watch?v=7keMX7XQP-k)
+[Watch the video presentation here](https://youtube.com/watch?v=7keMX7XQP-k)
 
 # Game Components
 
